@@ -1,7 +1,7 @@
 num = int(input())
 if num == 1:
     print(1)
-
+    
 for i in range (2, num + 1):
     if num % i == 0 and i % 4 != 0:
         print(i)
