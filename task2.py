@@ -5,3 +5,12 @@ a = 45
 b  = 35
 v = ((g*h*np.tan(b)**2) / (2*np.cos(a)**2 * (1 - np.tan(b) * np.tan(a))))**0.5
 print(v)
+from constant import k
+from constant import eiler as e
+from constant import h 
+from constant import pi
+t = 200
+c = 300
+N = (2 / pi)*(h/((k*t)**(3/2)))*(e**(-e/(k*t)))*c**(t/2)
+print (N)
+
