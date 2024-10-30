@@ -1,6 +1,6 @@
 import numpy as np
-N = int(input('Введите длину массива:' ))
-M = int(input('Введите ширину массива:'))
+N = int(input('Введите длину массивов:' ))
+M = int(input('Введите ширину массивов:'))
 mass1 = np.zeros((N,M))
 mass2= np.zeros((N,M))
 mass3 = np.zeros((N,M))
