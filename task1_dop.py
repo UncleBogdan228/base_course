@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def lissaju (bet = np.pi/2, a =1, A = 1, B = 1, b = 1):
-    t = np.linspace(0, 50, 50)
+def lissaju (bet = np.pi/2, a =0.1, A = 1, B = 1, b = 1):
+    t = np.linspace(0, 50, 1000)
     x = A * np.sin(a * t + bet)
     y = B * np.sin(b * t)
     plt.plot(x,y)
