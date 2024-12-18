@@ -10,6 +10,7 @@ anim_object, = plt.plot ([], [], '-', lw=2)
 parametr = np.linspace(0, 10, 100)
 ax.set_xlim(-10,10) 
 ax.set_ylim(-10,10)
+plt.axis('equal')
 
 def update (frame):
     t = np.arange(-2*np.pi, 2*np.pi, 0.1)
