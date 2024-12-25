@@ -10,14 +10,14 @@ f2 = 2.0
 frames = 100
 interval = 50
 
-fig, ax = plt.subplots(figsize=(8, 6))
+fig, ax = plt.subplots()
 ax.set_xlim(0, 10)
 ax.set_ylim(-2, 2)
 
-line1, = ax.plot([], [], color='blue', lw=2, label = "Синусоида 1") 
-point1, = ax.plot([], [], 'ro')
-line2, = ax.plot([], [], color='green', lw=2, label = "Синусоида 2") 
-point2, = ax.plot([], [], 'go')  
+line1, = ax.plot([], [], color='b', lw=2) 
+point1, = ax.plot([], [], 'o')
+line2, = ax.plot([], [], color='g', lw=2) 
+point2, = ax.plot([], [], 'o')  
 
 
 def animate(i):

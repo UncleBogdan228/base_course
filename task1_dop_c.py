@@ -8,11 +8,11 @@ t = np.linspace(0, 4 * np.pi, 200)
 x = R * (t - np.sin(t))
 y = R * (1 - np.cos(t))
 
-fig, ax = plt.subplots(figsize=(8, 8))
+fig, ax = plt.subplots()
 ax.set_xlim(-1, 4 * np.pi + 1)
 ax.set_ylim(-1, 2.5 * R)    
 ax.set_aspect('equal') 
-ax.plot(x, y, label='Циклоида', color='blue')
+ax.plot(x, y, color='b')
 point, = ax.plot([], [], 'o', color='r')
 
 def animate(i):
