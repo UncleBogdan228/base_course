@@ -2,41 +2,32 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
-# Настроим параметры анимации
-frames = 300  # Увеличиваем количество кадров
-fall_speed_initial = 2  # Уменьшаем начальную скорость
-gravity = 0.01  # Уменьшаем ускорение свободного падения
 
-# Определим фигуру и оси
+frames = 1000 
+fall_speed_initial = 2.5  
+gravity = 0.01  
 fig, ax = plt.subplots()
 ax.set_xlim(0, 10)
 ax.set_ylim(0, 10)
 
-# Создаем кружок
 circle = plt.Circle((5, 10), 0.5, color='blue')
 ax.add_artist(circle)
 
-# Начальные параметры
+
 position = 10  # Начальная высота
 velocity = fall_speed_initial  # Начальная скорость
-time_step = 1/30  # Шаг по времени (примерно 30 кадров в секунду)
+time_step = 1/30  
 
 def update(frame):
     global position, velocity
-    # Обновляем скорость и позицию кружка
-    velocity += gravity*time_step  # Увеличиваем скорость из-за "гравитации"
-    position -= velocity*time_step  # Обновляем позицию
+    
+    velocity += gravity*time_step  
+    position -= velocity*time_step  
     circle.set_center((5, position))
-    if position < 0:  # Предотвращаем падение ниже оси
-        position = 0
-        velocity = 0
     return circle,
-
+plt.axis('equal')
 # Создаем анимацию
-ani = FuncAnimation(fig, update, frames=frames, blit=True, repeat=False)
+ani = FuncAnimation(fig, update, frames=frames, blit=True, repeat=False, interval=25)
 
 ani.save("fall.gif", writer = 'pillow')
-# Показываем анимацию
-
- 
      
